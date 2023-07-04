@@ -42,7 +42,6 @@ workflows:
   # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
   sample:
     jobs:
-      - test
       - cypress/run:
           executor: "node-cypress"
           command: yarn run e2e
@@ -51,7 +50,7 @@ workflows:
       # - node/test
     triggers:
       - schedule:
-          cron: '15 * * * *'
+          cron: '22 * * * *'
           filters:
             branches:
               only:
